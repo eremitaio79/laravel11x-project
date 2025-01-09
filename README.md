@@ -2,7 +2,7 @@
 
 ## Este é um projeto completo que estou desenvolvendo em Laravel 11x para estudos, referências, treino e testes gerais. Espero que ele possa ajudar outros programadores.
 
-### Configuração do ambiente de desenvolvimento.
+## Configuração do ambiente de desenvolvimento.
 
 Para este projeto, utilizei os seguintes aplicativos:
 
@@ -13,13 +13,13 @@ Para este projeto, utilizei os seguintes aplicativos:
 
 ---
 
-### Composer e Laravel 11x
+## Composer e Laravel 11x
 
 Primeiramente instalei o **Composer** para fazer o gerenciamento das dependências do Laravel.
 
 O Composer pode ser baixado em:
 
-[Baixe o Composer aqui...](https://getcomposer.org/download/)
+> [Baixe o Composer aqui...](https://getcomposer.org/download/)
 
 Após instalar o Composer, verifique se ele foi adicionado nas _Variáveis de Ambiente_ do sistema operacional.
 
@@ -31,7 +31,7 @@ composer -v
 
 ---
 
-### Criando o projeto com Laravel 11x
+## Criando o projeto com Laravel 11x
 
 Para criar o projeto em Laravel 11x, acesse o site da documentação.
 
@@ -87,3 +87,37 @@ A seguir, execute as migrates:
 ```
 php artisan migrate
 ```
+
+## Após a criação do projeto, parametrizar o arquivo `.env`:
+
+```
+APP_NAME=Laravel11x-Project
+APP_DEBUG=true
+APP_TIMEZONE=America/Belem
+APP_URL=http://localhost:8000/
+
+APP_LOCALE=pt-BR
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel11x_project
+DB_USERNAME=root
+DB_PASSWORD=123456
+```
+
+Em princípio, configure estas linhas dentro do arquivo `.env`
+
+> Para saber qual o timezone correto de sua regição, use o seguinte link: [Lista de TimeZone para seu projeto...](https://www.php.net/manual/pt_BR/timezones.php)
+
+## Após os ajustes, execute o projeto no navegador
+
+Para rodar o servidor local do Laravel, execute o seguinte comando no terminal:
+
+```
+php artisan serve
+```
+
+A seguir, entre a url no navegador:
+
+> [http://localhost:8000/](http://localhost:8000/)
