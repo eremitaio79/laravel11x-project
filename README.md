@@ -121,3 +121,37 @@ php artisan serve
 A seguir, entre a url no navegador:
 
 > [http://localhost:8000/](http://localhost:8000/)
+
+> **OBS.:** é esperado que o arquivo `.env` não seja incluído quando você clona um repositório Laravel. O arquivo .env contém configurações sensíveis, como credenciais de banco de dados, chaves de API e outras variáveis de ambiente importantes que não devem ser compartilhadas publicamente no repositório.Por que o arquivo .env não é clonado? O Laravel (e outras boas práticas de desenvolvimento) adiciona o arquivo .env ao .gitignore, o que significa que ele é ignorado pelo Git. Isso impede que informações confidenciais ou específicas de cada ambiente de desenvolvimento sejam enviadas para o repositório e compartilhadas inadvertidamente.
+
+## O que fazer após clonar o repositório do Laravel?
+
+Após baixar o projeto para a máquina de desenvolvimento, abra o arquivo `.env.example` e salve como `.env` na pasta raiz do projeto. Esse será o novo arquivo de configurações do projeto na sua máquina.
+
+Faça as configurações padrão conforme já foi mostrado acima.
+
+### Gere a chave da aplicação.
+
+O Laravel usa uma chave de aplicação que é gerada automaticamente no momento da instalação. Se você clonou o repositório e criou o arquivo .env, execute o comando abaixo para gerar essa chave:
+
+```
+php artisan key:generate
+```
+
+### Instale as dependências do projeto.
+
+Faça a instalação das dependências do Laravel usando o Composer:
+
+```
+composer install
+```
+
+### Execute as migrations:
+
+Rodar as migrations para criar as tabelas necessárias no banco de dados. Caso o banco ainda não existe, será perguntado se deseja criar o mesmo:
+
+```
+php artisan migrate
+```
+
+Com isso, o projeto está pronto para uso no computador de desenvolvimento.
