@@ -108,7 +108,7 @@ DB_PASSWORD=123456
 
 Em princípio, configure estas linhas dentro do arquivo `.env`
 
-> Para saber qual o timezone correto de sua regição, use o seguinte link: [Lista de TimeZone para seu projeto...](https://www.php.net/manual/pt_BR/timezones.php)
+> Para saber qual o timezone correto de sua região, use o seguinte link: [Lista de TimeZones para seu projeto...](https://www.php.net/manual/pt_BR/timezones.php)
 
 ## Após os ajustes, execute o projeto no navegador
 
